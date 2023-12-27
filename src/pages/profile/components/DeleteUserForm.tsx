@@ -34,9 +34,9 @@ export default function DeleteUserForm({ className = '' }) {
     return (
         <section className={`space-y-6 ${className}`}>
             <header>
-                <h2 className="text-lg font-medium text-gray-900">Delete Account</h2>
+                <h2 className="text-lg font-medium text-gray-900 dark:text-gray-50">Delete Account</h2>
 
-                <p className="mt-1 text-sm text-gray-600">
+                <p className="mt-1 text-sm text-gray-600 dark:text-gray-200">
                     Once your account is deleted, all of its resources and data will be permanently deleted. Before
                     deleting your account, please download any data or information that you wish to retain.
                 </p>
@@ -45,19 +45,19 @@ export default function DeleteUserForm({ className = '' }) {
             <DangerButton onClick={() => setConfirmingUserDeletion(true)}>Delete Account</DangerButton>
 
             <Modal show={confirmingUserDeletion} onClose={closeModal}>
-                <form onSubmit={deleteAccount} className="p-6">
+                <form onSubmit={deleteAccount} className="p-6 dark:bg-black">
 
-                    <h2 className="text-lg font-medium text-gray-900">
+                    <h2 className="text-lg font-medium text-gray-900 dark:text-gray-50">
                         Are you sure you want to delete your account?
                     </h2>
 
-                    <p className="mt-1 text-sm text-gray-600">
+                    <p className="mt-1 text-sm text-gray-600 dark:text-gray-200">
                         Once your account is deleted, all of its resources and data will be permanently deleted. Please
                         enter your password to confirm you would like to permanently delete your account.
                     </p>
 
                     <div className="mt-6">
-                        <Label htmlFor="password" className="sr-only">Password</Label>
+                        <Label htmlFor="password" className="sr-only dark:text-white">Password</Label>
 
                         <Input
                             id="password"
@@ -65,7 +65,7 @@ export default function DeleteUserForm({ className = '' }) {
                             name="password"
                             value={password}
                             onChange={(event: FormEvent) => setPassword((event.target as HTMLInputElement).value)}
-                            className="mt-1 block w-3/4"
+                            className="mt-1 block w-3/4 bg-[#f8f8f8] dark:bg-[#2C303B] dark:text-white"
                             placeholder="Password"
                             required
                             autoFocus

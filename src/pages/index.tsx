@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useAuth } from '@/hooks/auth';
+import ThemeToggler from '@/components/ThemeToggler';
 
 export default function Home() {
   const { user } = useAuth({ middleware: 'guest', redirectIfAuthenticated: '/' });
@@ -13,27 +14,30 @@ export default function Home() {
 
       <div className="pt-6 flex items-start justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
         <div className="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+        <div className="flex items-center">
           {user ? (
             <Link
               href="/dashboard"
-              className="ml-4 text-sm text-gray-700 underline">
+              className="ml-4 text-sm text-gray-700 dark:text-gray-100 underline">
               Dashboard
             </Link>
           ) : (
             <>
               <Link
                 href="/login"
-                className="text-sm text-gray-700 underline">
+                className="text-sm text-gray-700 dark:text-gray-100 underline">
                 Login
               </Link>
 
               <Link
                 href="/register"
-                className="ml-4 text-sm text-gray-700 underline">
+                className="ml-4 text-sm text-gray-700 dark:text-gray-100 underline">
                 Register
               </Link>
             </>
-          )}              
+          )}
+          <ThemeToggler />
+        </div>                
         </div>
 
         <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
@@ -53,7 +57,7 @@ export default function Home() {
 
               <div className="p-6">
                 <div className="ml-12">
-                  <div className="mt-2 text-gray-600 dark:text-gray-400 text-base">
+                  <div className="mt-2 text-gray-600 dark:text-gray-200 text-base">
                     <p>
                     Laravel Breeze is an implementation of all of Laravel&apos;s authentication features, including login, registration, password reset, email verification, and password confirmation.
                     Breeze includes a simple &quot;profile&quot; page where the user may update their name, email address, and password.
@@ -76,7 +80,7 @@ export default function Home() {
           </div>
  
           <div className="flex justify-center mt-4 sm:items-center sm:justify-between">
-            <div className="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
+            <div className="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
               Laravel Breeze API Backend with Next.js Frontend
             </div>
           </div>
