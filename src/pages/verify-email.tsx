@@ -30,7 +30,7 @@ const VerifyEmail = () => {
                 </div>
 
                 {status === 'verification-link-sent' && (
-                    <div className="mb-4 font-medium text-sm text-green-600 dark:text-gray-200">
+                    <div className="mb-4 font-medium text-sm text-green-600 dark:text-green-200">
                         A new verification link has been sent to the email
                         address you provided during registration.
                     </div>
