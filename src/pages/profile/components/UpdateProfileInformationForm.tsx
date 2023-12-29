@@ -128,7 +128,7 @@ export default function UpdateProfileInformationForm({ mustVerifyEmail=false, ve
                         </p>
 
                         {status === 'verification-link-sent' && (
-                            <div className="mt-2 font-medium text-sm text-green-600">
+                            <div className="mt-2 font-medium text-sm text-green-600 dark:text-green-200">
                                 A new verification link has been sent to your email address.
                             </div>
                         )}
