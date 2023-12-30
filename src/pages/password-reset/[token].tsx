@@ -53,13 +53,13 @@ const PasswordReset = () => {
                 <form onSubmit={submitForm}>
                     {/* Email Address */}
                     <div>
-                        <Label className="text-dark dark:text-white" htmlFor="email">Email</Label>
+                        <Label htmlFor="email">Email</Label>
 
                         <Input
                             id="email"
                             type="email"
                             value={email}
-                            className="block mt-1 w-full bg-[#f8f8f8] dark:bg-[#2C303B] dark:text-white"
+                            className="block mt-1 w-full"
                             onChange={(event: FormEvent) => setEmail((event.target as HTMLInputElement).value)}
                             required
                             autoFocus
@@ -70,12 +70,12 @@ const PasswordReset = () => {
 
                     {/* Password */}
                     <div className="mt-4">
-                        <Label className="text-dark dark:text-white" htmlFor="password">Password</Label>
+                        <Label htmlFor="password">Password</Label>
                         <Input
                             id="password"
                             type="password"
                             value={password}
-                            className="block mt-1 w-full bg-[#f8f8f8] dark:bg-[#2C303B] dark:text-white"
+                            className="block mt-1 w-full"
                             onChange={(event: FormEvent) => setPassword((event.target as HTMLInputElement).value)}
                             required
                         />
@@ -88,7 +88,7 @@ const PasswordReset = () => {
 
                     {/* Confirm Password */}
                     <div className="mt-4">
-                        <Label className="text-dark dark:text-white" htmlFor="passwordConfirmation">
+                        <Label htmlFor="passwordConfirmation">
                             Confirm Password
                         </Label>
 
@@ -96,7 +96,7 @@ const PasswordReset = () => {
                             id="passwordConfirmation"
                             type="password"
                             value={passwordConfirmation}
-                            className="block mt-1 w-full bg-[#f8f8f8] dark:bg-[#2C303B] dark:text-white"
+                            className="block mt-1 w-full"
                             onChange={(event: FormEvent) =>
                                 setPasswordConfirmation((event.target as HTMLInputElement).value)
                             }

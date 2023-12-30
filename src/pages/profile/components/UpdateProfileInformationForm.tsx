@@ -75,11 +75,11 @@ export default function UpdateProfileInformationForm({ mustVerifyEmail=false, ve
 
             <form onSubmit={updateProfile} className="mt-6 space-y-6">
                 <div>
-                    <Label className="text-dark dark:text-white" htmlFor="name">Name</Label>
+                    <Label htmlFor="name">Name</Label>
 
                     <Input
                         id="name"
-                        className="mt-1 block w-full bg-[#f8f8f8] dark:bg-[#2C303B] dark:text-white"
+                        className="mt-1 block w-full"
                         value={name}
                         onChange={(event: FormEvent) => setName((event.target as HTMLInputElement).value)}
                         required
@@ -94,12 +94,12 @@ export default function UpdateProfileInformationForm({ mustVerifyEmail=false, ve
                 </div>
 
                 <div>
-                    <Label className="text-dark dark:text-white" htmlFor="email">Email</Label>
+                    <Label htmlFor="email">Email</Label>
 
                     <Input
                         id="email"
                         type="email"
-                        className="mt-1 block w-full bg-[#f8f8f8] dark:bg-[#2C303B] dark:text-white"
+                        className="mt-1 block w-full"
                         value={email}
                         onChange={(event: FormEvent) => setEmail((event.target as HTMLInputElement).value)}
                         required

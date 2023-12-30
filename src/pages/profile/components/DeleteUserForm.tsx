@@ -57,7 +57,7 @@ export default function DeleteUserForm({ className = '' }) {
                     </p>
 
                     <div className="mt-6">
-                        <Label htmlFor="password" className="sr-only dark:text-white">Password</Label>
+                        <Label htmlFor="password" className="sr-only">Password</Label>
 
                         <Input
                             id="password"
@@ -65,7 +65,7 @@ export default function DeleteUserForm({ className = '' }) {
                             name="password"
                             value={password}
                             onChange={(event: FormEvent) => setPassword((event.target as HTMLInputElement).value)}
-                            className="mt-1 block w-3/4 bg-[#f8f8f8] dark:bg-[#2C303B] dark:text-white"
+                            className="mt-1 block w-3/4"
                             placeholder="Password"
                             required
                             autoFocus

@@ -61,14 +61,14 @@ export default function UpdatePasswordForm({ className = '' }) {
             <form onSubmit={updatePasswd} className="mt-6 space-y-6">
 
                 <div>
-                    <Label className="text-dark dark:text-white" htmlFor="current_password">Current Password</Label>
+                    <Label htmlFor="current_password">Current Password</Label>
 
                     <Input
                         id="currentPassword"
                         value={currentPassword}
                         onChange={(event: FormEvent) => setCurrentPassword((event.target as HTMLInputElement).value)}
                         type="password"
-                        className="mt-1 block w-full bg-[#f8f8f8] dark:bg-[#2C303B] dark:text-white"
+                        className="mt-1 block w-full"
                         autoComplete="current-password"
                         required
                     />
@@ -80,14 +80,14 @@ export default function UpdatePasswordForm({ className = '' }) {
                 </div>
 
                 <div>
-                    <Label className="text-dark dark:text-white" htmlFor="password">New Password</Label>
+                    <Label htmlFor="password">New Password</Label>
 
                     <Input
                         id="password"
                         value={password}
                         onChange={(event: FormEvent) => setPassword((event.target as HTMLInputElement).value)}
                         type="password"
-                        className="mt-1 block w-full bg-[#f8f8f8] dark:bg-[#2C303B] dark:text-white"
+                        className="mt-1 block w-full"
                         autoComplete="new-password"
                         required
                     />
@@ -99,14 +99,14 @@ export default function UpdatePasswordForm({ className = '' }) {
                 </div>
 
                 <div>
-                    <Label className="text-dark dark:text-white" htmlFor="passwordConfirmation">Confirm Password</Label>
+                    <Label htmlFor="passwordConfirmation">Confirm Password</Label>
 
                     <Input
                         id="passwordConfirmation"
                         value={passwordConfirmation}
                         onChange={(event: FormEvent) => setPasswordConfirmation((event.target as HTMLInputElement).value)}
                         type="password"
-                        className="mt-1 block w-full bg-[#f8f8f8] dark:bg-[#2C303B] dark:text-white"
+                        className="mt-1 block w-full"
                         autoComplete="new-password"
                         required
                     />

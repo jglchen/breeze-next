@@ -60,13 +60,13 @@ const Login = () => {
                 <form onSubmit={submitForm}>
                     {/* Email Address */}
                     <div>
-                        <Label className="text-dark dark:text-white" htmlFor="email">Email</Label>
+                        <Label htmlFor="email">Email</Label>
 
                         <Input
                             id="email"
                             type="email"
                             value={email}
-                            className="block mt-1 w-full bg-[#f8f8f8] dark:bg-[#2C303B] dark:text-white"
+                            className="block mt-1 w-full"
                             onChange={(event: FormEvent) => setEmail((event.target as HTMLInputElement).value)}
                             required
                             autoFocus
@@ -77,13 +77,13 @@ const Login = () => {
 
                     {/* Password */}
                     <div className="mt-4">
-                        <Label className="text-dark dark:text-white" htmlFor="password">Password</Label>
+                        <Label htmlFor="password">Password</Label>
 
                         <Input
                             id="password"
                             type="password"
                             value={password}
-                            className="block mt-1 w-full bg-[#f8f8f8] dark:bg-[#2C303B] dark:text-white"
+                            className="block mt-1 w-full"
                             onChange={(event: FormEvent) => setPassword((event.target as HTMLInputElement).value)}
                             required
                             autoComplete="current-password"
